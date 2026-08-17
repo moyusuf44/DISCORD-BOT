@@ -23,6 +23,8 @@ module "ecs" {
 
 module "dynamodb" {
     source = "./modules/04-dynamodb"
+
+    table_name = var.table_name
 }
 
 module "sqs" {

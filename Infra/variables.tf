@@ -21,3 +21,8 @@ variable "desired_count" {
 variable "region_id" {
     type = string 
 }
+
+variable "table_name" {
+    type = string 
+}
+
