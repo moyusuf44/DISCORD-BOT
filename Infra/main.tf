@@ -29,6 +29,8 @@ module "dynamodb" {
 
 module "sqs" {
     source = "./modules/05-sqs"
+
+    queue_name = var.queue_name
 }
 
 module "monitor" {
