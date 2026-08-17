@@ -1,0 +1,34 @@
+module "vpc" {
+    source = "./modules/01-vpc"
+}
+
+module "ecr" {
+    source = "./modules/02-ecr"
+
+}
+
+module "ecs" {
+    source = "./modules/03-ecs"
+
+    subnets         = module.vpc.public_subnets
+    security_groups = [module.vpc.ecs_security_group]
+
+    cpu           = var.cpu
+    memory        = var.memory
+    image_id      = var.image_id
+    desired_count = var.desired_count
+    cluster_name  = var.cluster_name
+
+}
+
+module "dynamodb" {
+    source = "./modules/04-dynamodb"
+}
+
+module "sqs" {
+    source = "./modules/05-sqs"
+}
+
+module "monitor" {
+    source = "./modules/06-monitor"
+}

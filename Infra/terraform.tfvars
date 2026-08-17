@@ -1,0 +1,5 @@
+cluster_name  = "discord-bot-cluster"
+cpu           = "512"
+memory        = "1024"
+desired_count = "1"
+region_id     = "eu-north-1"
