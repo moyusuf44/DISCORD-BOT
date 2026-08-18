@@ -6,5 +6,6 @@ resource "aws_dynamodb_table" "terraform-discord-bot-state-lock" {
     attribute = {
         name = "LockID"
         type = "S"
+ 
     }
 }
