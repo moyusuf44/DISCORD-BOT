@@ -18,7 +18,7 @@ module "ecs" {
     image_id      = var.image_id
     desired_count = var.desired_count
     cluster_name  = var.cluster_name
-
+    service_name  = var.service_name
 }
 
 module "dynamodb" {

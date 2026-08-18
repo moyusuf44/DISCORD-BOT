@@ -29,7 +29,3 @@ variable "subnets" {
 variable "security_groups" {
     type = list(string)
 }
-
-variable "region_id" {
-    type = string 
-}

@@ -8,7 +8,7 @@ resource "aws_dynamodb_table" "this" {
         type = "S"
     }
 
-    tags {
+    tags = {
         name       = var.table_name
         Enviroment = "dev"
     }
