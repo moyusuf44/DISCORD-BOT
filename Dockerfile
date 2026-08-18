@@ -1,0 +1,24 @@
+# Stage 1: Build Stage
+
+FROM python:3.11-slim AS build
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Stage 2: Runtime Stage
+
+FROM python:3.11-slim AS runtime-stage
+
+WORKDIR /app
+
+COPY --from=build /usr/local/lib/python3.11/site-packages /usr/local/lib/python3.11/site-packages
+COPY --from=build /usr/local/bin /usr/local/bin
+COPY app/ .
+
+CMD ["python", "main.py"]
+
+
+
