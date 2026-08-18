@@ -35,4 +35,7 @@ module "sqs" {
 
 module "monitor" {
     source = "./modules/06-monitor"
+
+    cluster_name = module.ecs.aws_ecs_cluster
+    service_name = module.ecs.aws_ecs_service
 }

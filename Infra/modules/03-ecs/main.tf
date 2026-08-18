@@ -37,7 +37,7 @@ resource "aws_ecs_task_definition" "this" {
 }
 
 resource "aws_ecs_service" "this" {
-    name            = "discord-bot-service"
+    name            = var.service_name
     cluster         = aws_ecs_cluster.this.id 
     task_definition = aws_ecs_task_definition.this.id
 

@@ -1,4 +1,5 @@
 cluster_name  = "discord-bot-cluster"
+service_name  = "discord-bot-service"
 cpu           = "512"
 memory        = "1024"
 desired_count = "1"
