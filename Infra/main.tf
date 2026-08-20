@@ -13,12 +13,13 @@ module "ecs" {
     subnets         = module.vpc.public_subnets
     security_groups = [module.vpc.ecs_security_group]
 
-    cpu           = var.cpu
-    memory        = var.memory
-    image_id      = var.image_id
-    desired_count = var.desired_count
-    cluster_name  = var.cluster_name
-    service_name  = var.service_name
+    discord_bot_token = var.discord_bot_token
+    cpu               = var.cpu
+    memory            = var.memory
+    image_id          = var.image_id
+    desired_count     = var.desired_count
+    cluster_name      = var.cluster_name
+    service_name      = var.service_name
 }
 
 module "dynamodb" {

@@ -33,3 +33,8 @@ variable "queue_name" {
 variable "service_name" {
     type = string 
 }
+
+variable "discord_bot_token" {
+  type      = string
+  sensitive = true
+}
