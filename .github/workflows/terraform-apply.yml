@@ -35,3 +35,4 @@ jobs:
           --auto-approve \
           -var="image_id=592587463331.dkr.ecr.eu-north-1.amazonaws.com/discord-bot:v1" \
           -var="discord_bot_token=${{ secrets.DISCORD_BOT_TOKEN }}"
+          
