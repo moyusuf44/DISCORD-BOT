@@ -11,6 +11,13 @@ dev.tfvars
 terraform-state-lock/
 Infra/
 
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.venv
+
 # Terraform plans
 terraform-plan-stage1.yml
 terraform-plan-stage2.yml
