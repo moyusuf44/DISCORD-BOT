@@ -21,7 +21,7 @@ resource "aws_ecs_task_definition" "this" {
     container_definitions = jsonencode ([
         {
             name  = "discord-bot"
-            iamge = var.image_id
+            image = var.image_id
 
             logConfiguration = {
                 logDriver = "awslogs"
