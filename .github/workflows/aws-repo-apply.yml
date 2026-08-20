@@ -34,4 +34,5 @@ jobs:
           terraform apply \
           -target=module.ecr \
           --auto-approve \
+          -var="discord_bot_token=${{ secrets.DISCORD_BOT_TOKEN }}" \
           -var="image_id=bootstrap"

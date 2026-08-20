@@ -29,3 +29,8 @@ variable "subnets" {
 variable "security_groups" {
     type = list(string)
 }
+
+variable "discord_bot_token" { 
+  type      = string
+  sensitive = true
+}

@@ -23,6 +23,13 @@ resource "aws_ecs_task_definition" "this" {
             name  = "discord-bot"
             image = var.image_id
 
+            secrets = [
+            {
+            name      = "DISCORD_BOT_TOKEN"
+            valueFrom = aws_secretsmanager_secret.discord_bot_token.arn
+            }
+            ]
+
             logConfiguration = {
                 logDriver = "awslogs"
 
